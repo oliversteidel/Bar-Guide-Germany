@@ -15,7 +15,6 @@
 html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 main {
@@ -95,8 +94,6 @@ nav {
     color: var(--font-color);
     background: var(--bg-color);
     z-index: 2;
-    box-shadow: 0 8px 8px -12px var(--font-color);
-    
 }
 
 .fa-glass-martini-alt {
@@ -150,6 +147,8 @@ nav {
     right: 10px;
     transition: all .5s ease-in;
 }
+
+
 
 .nd-item-19 {
     border-bottom: 1px solid var(--font-color);
@@ -304,8 +303,8 @@ select option {
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-right: auto;    
-    padding: 80px 40px 40px 40px;
+    margin-right: auto;
+    padding: 40px;
     text-transform: uppercase;
     color: var(--font-color);
 }
