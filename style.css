@@ -15,6 +15,7 @@
 html, body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -94,6 +95,7 @@ nav {
     color: var(--font-color);
     background: var(--bg-color);
     z-index: 2;
+    box-shadow: 0 8px 6px -10px var(--font-color);
 }
 
 .fa-glass-martini-alt {
@@ -112,6 +114,21 @@ nav {
 .town {
     margin-left: 1em;
     cursor: pointer;
+    position: relative;
+}
+
+.town:hover::after {
+    width: 100%;
+}
+
+.town::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    top: 20px;
+    left: 0;
+    border-bottom: 1px solid var(--font-color);    
+    transition: all .25s ease-in;
 }
 
 .nav-dropdown {
@@ -119,16 +136,20 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 80px;
-    width: 160px;
+    right: 0;
+    width: 180px;
     color: var(--font-color);
     line-height: 1.5em;
     overflow-x: hidden;
+    z-index: -1;
 }
 
 .nav-dropdown-item {
-    width: 160px;
-    background: var(--bg-color);
-    transform: translateX(160px);
+    width: 180px;
+    height: 30px;
+    padding-left: 1em;
+    background: rgba(247, 247, 247, .9);
+    transform: translateX(180px);
     border-top: 1px solid var(--font-color);
 }
 
@@ -147,8 +168,6 @@ nav {
     right: 10px;
     transition: all .5s ease-in;
 }
-
-
 
 .nd-item-19 {
     border-bottom: 1px solid var(--font-color);
@@ -304,7 +323,7 @@ select option {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px;
+    padding: 80px 40px 40px 40px;
     text-transform: uppercase;
     color: var(--font-color);
 }
@@ -399,7 +418,6 @@ select option {
         height: 300px;
         padding-left: 1em;
         overflow: hidden;
-        outline: 1px solid blue;
     }
     .welcome-text {
         font-size: 1.7rem;
@@ -416,7 +434,7 @@ select option {
         padding-bottom: 25px;
     }
     .destination-page {
-        padding: 20px;
+        padding: 80px 20px 20px 20px;
     }
     .destination-heading {
         font-size: 2rem;
