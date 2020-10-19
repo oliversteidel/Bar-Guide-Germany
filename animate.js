@@ -46,6 +46,7 @@ $(document).ready(function () {
                 });
                 delayTime += 0.05;
             }
+            $('.nav-dropdown').addClass('dropdown-shadow');
             closed = false;
         } else {
 
@@ -57,6 +58,7 @@ $(document).ready(function () {
                 });
                 delayTime += 0.05;
             }
+            $('.nav-dropdown').removeClass('dropdown-shadow');
             closed = true;
         }
     });
